@@ -1,4 +1,4 @@
-let ar = [];
+let ar:any[] = [];
 for (let i = 0; i <= 100; i++) {
 ar[i] = i;
 if(ar[i] % 3 == 0){

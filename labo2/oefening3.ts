@@ -1,4 +1,4 @@
-let arr = [];
+let arr:number = [];
 for (let i = 0; i <= 10; i++) {
     arr[i] = 7*i;
     if(arr[i] % 3 == 0 && arr[i] % 5 == 0){

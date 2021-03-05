@@ -1,0 +1,14 @@
+
+
+Oef 1 
+fouten: geen type gegeven bij het aanmaken van variabele
+Oef 2
+fouten: idem
+Oef 3
+fouten: idem, heb gebruik gemaakt van een if else wanneer bijde in een standaard if konden
+((getal % 5 == 0 || getal % 3 == 0) && !(getal %5 == 0 && getal % 3 == 0)),
+tweede deel niet gedaan:
+((getal % 5 == 0 || getal % 3 == 0) && !(getal %5 == 0 && getal % 3 == 0)) ? console.log(getal) : undefined;
+extra:  heb de verschillende opdrachten in in elkaar gemaakt in plaats van verschillende onder elkaar
+Oef 4
+fouten: idem, heb gebruik gemaakt van een array die any accepteerd en de values hierin aangepast en daarna ge logged wanneer het gemakelijker was om deze ineens te printen.
