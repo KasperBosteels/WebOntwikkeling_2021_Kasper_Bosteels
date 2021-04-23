@@ -1,5 +1,3 @@
-import { resolve } from "node:path";
-
 const slowSum = (a: number, b: number) => {
     return new Promise<number>((resolve, reject) => {
         setTimeout(() => {

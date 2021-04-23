@@ -1,4 +1,4 @@
-const Fetch = require('node-fetch');
+var Fetch = require('node-fetch');
 
 const getCoctail = async (id:number):Promise<string> =>{
     let result:any = await Fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
