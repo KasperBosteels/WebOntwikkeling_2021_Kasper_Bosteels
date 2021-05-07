@@ -1,0 +1,32 @@
+<body>
+<%- include('./template.ejs'); %>
+
+<%
+let movies = [
+    {name:"The Matrix", myScore:90},
+    {name:"Pulp Fiction", myScore:100},
+    {name:"Monster Hunter", myScore:5},
+    {name:"Blade Runner", myScore:100}
+];
+let links =[
+    "/movie/0",
+    "/movie/1",
+    "/movie/2",
+    "/movie/3"
+];
+let i =0;
+%>
+<ul>
+<%
+    movies.forEach( movie=>{
+%>
+    <li class="movieReview"><p> <%= movie.name %><br>  fish rating: <%= movie.myScore %> </p>    
+    <a href='<%= links[i] %>'>link naar: <%= movie.name %></a>
+    </li> 
+    <%
+
+i +=1;
+    });
+%>
+</ul>
+</body>
