@@ -1,7 +1,3 @@
-
-
-
-
 //#region deel 1
 interface Movie {
     "title": string,
@@ -34,18 +30,14 @@ let myworstmovie:Movie ={
 //#endregion
 
 //#region  deel 2
-let  wasMovieMadeInThe90s : wasMovieMadeInThe90s = (movie:Movie) =>{
-if(movie.year > 1980 && movie.year < 2000){
-    return true;
-}else {
-    return false;
-}
+let  wasMovieMadeInThe90s : wasMovieMadeInThe90s = (movie:Movie):boolean =>{
+return movie.year >= 1990 && movie.year < 2000;
 }
 console.log(wasMovieMadeInThe90s(thematrix));
 console.log(wasMovieMadeInThe90s(Myfavoritemovie));
 
-let averageMetaScore: averageMetaScore  = (movies:Movie[]) =>{
-    let average = 0;
+let averageMetaScore: averageMetaScore  = (movies:Movie[]):number =>{
+    let average:number = 0;
     movies.forEach(movie => {
         average += movie.metascore;
     });
@@ -53,7 +45,7 @@ let averageMetaScore: averageMetaScore  = (movies:Movie[]) =>{
 }
 console.log(averageMetaScore([thematrix,myworstmovie,Myfavoritemovie]));
 
-let fakeMetascore:fakeMovie =(movie:Movie,newscore:number)=>{
+let fakeMetascore:fakeMovie =(movie:Movie,newscore:number):Movie=>{
     let newmovie:Movie ={
         title: movie.title,
         year: movie.year,

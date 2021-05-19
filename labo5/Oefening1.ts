@@ -7,12 +7,12 @@ const printstuff:IPrinstStuff = (amount,text)=>console.log(`Hello ${text}, you a
 interface ItwoArray{
     (element1:string,element2:string):string []
 }
-const twoArray:ItwoArray = (elemtn1,element2) => [elemtn1,element2];
+const twoArray:ItwoArray = (element1,element2) => [element1,element2];
 
 interface InumberToString {
     (number:number):string
 }
-const numberToString:InumberToString = (number) => `${number}`;
+const numberToString:InumberToString = number => `${number}`;
 
 printstuff(12,"Kasper");
 console.log(twoArray("hello","sayonara"));

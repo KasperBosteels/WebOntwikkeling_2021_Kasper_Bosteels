@@ -1,30 +1,22 @@
 
 var Fetch = require('node-fetch');
 
-const getDogJokes = async ():Promise<string>=>{
-    let page:number = 1;
-    let pages:number = 1;
-    let jokes:string = "";
-for (page < pages; page++;) {
-
-    let result = await Fetch(`https://icanhazdadjoke.com/search?term=dog&limit=5&page=${page}`, {
-    headers: {
-      'Accept': 'application/json'
+const getDogJokes = async ()=>{
+    let pagenumber:number = 1;
+    while(){
+        let response = await fetch(`https://icanhazdadjoke.com/search?term=dog&limit=5&page=${pagenumber}`,{
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        let json =await response.json();
+        json.results.forEach((j:any) => console.log(j.joke));
+        if(json.next_page >= pagenumber){break;}
+        pagenumber++;
     }
- })
- let response = await result.json();
-  pages = response.total_pages;
-  console.log(response);
-  console.log(pages);
-  console.log(page);
- response.results.forEach((joke: any) => {
-    jokes += `${joke.joke}\n`;
- });    
+   
 }
-
-
-return jokes;
-}
+export{};
 
 let mopjes = getDogJokes().then(jokes =>{
     console.log(jokes);
