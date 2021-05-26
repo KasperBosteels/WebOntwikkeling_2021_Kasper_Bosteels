@@ -1,6 +1,6 @@
-const mongodb:String ="mongodb+srv://test_user:thisisatest@webontwikkelingcluster.eiiyi.mongodb.net/WebOntwikkeling?retryWrites=true&w=majority"
-const {MongoClient} = require('mongodb');
-const client = new MongoClient(mongodb,{useUnifiedTopology:true});
+//const mongodb:String ="mongodb+srv://test_user:thisisatest@webontwikkelingcluster.eiiyi.mongodb.net/WebOntwikkeling?retryWrites=true&w=majority"
+//const {MongoClient} = require('mongodb');
+//const client = new MongoClient(mongodb,{useUnifiedTopology:true});
 interface movie {
     name:string;
     myScore:number;
@@ -63,7 +63,7 @@ const findAllMovieScores = async ():Promise<any>=>{
         let result = await cursor.toArray();
         let myScores:string = `movie scores:\n`
         let views:number = 0;
-
+        console.log(result);
         for (let i = 0; i < result.length; i++) {
             views += result[i].timesViewed;
             myScores += `${result[i].name} - ${result[i].myScore}\n`;   
@@ -79,6 +79,7 @@ const findAllMovieScores = async ():Promise<any>=>{
         console.log('connection closed');
     }
 }
+findAllMovieScores();
 //#endregion
 
 //#region find movies filtered

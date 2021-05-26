@@ -1,0 +1,20 @@
+<body>
+<%- include('./template.ejs'); %>
+
+<%
+let i =0;
+%>
+<ul>
+<%
+moviearray.forEach(function(movie){
+%>
+    <li class="movieReview"><p> <%= movie.name %><br>  fish rating: <%= movie.myScore %> </p>    
+    <a href='<%= `/movie/${i}` %>'>link naar: <%= movie.name %></a>
+    </li> 
+    <%
+
+i +=1;
+    });
+%>
+</ul>
+</body>

@@ -23,6 +23,5 @@ app.get('/movie/:index',(req:any,res:any)=>{
 })
 
 
-
 app.listen(app.get('port'),
 ()=>console.log('[server] http://localhost:' + app.get('port')));

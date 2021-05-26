@@ -1,0 +1,15 @@
+<body>
+    <%- include('./template.ejs'); %>
+<%
+let movies = [
+    {name:"The Matrix", myScore:90},
+    {name:"Pulp Fiction", myScore:100},
+    {name:"Monster Hunter", myScore:5},
+    {name:"Blade Runner", myScore:100}
+];
+%>
+<div>
+<h1><%= moviearray[number].name %></h1>
+<p>score: <%= moviearray[number].myScore %> <br></p>
+</div>
+</body>
